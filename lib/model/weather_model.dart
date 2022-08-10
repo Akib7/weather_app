@@ -122,9 +122,9 @@ class WeatherModel {
     if (weather != null) {
       final v = weather;
       final arr0 = [];
-      v!.forEach((v) {
+      for (var v in v!) {
         arr0.add(v!.toJson());
-      });
+      }
       data['weather'] = arr0;
     }
     data['base'] = base;
