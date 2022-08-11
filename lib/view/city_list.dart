@@ -11,6 +11,15 @@ class CityList extends StatefulWidget {
 
 class CityListState extends State<CityList> {
   late List data;
+  String dropdownValue = 'Dhaka';
+  String holder = '';
+
+  List<String> locationName = [];
+  void getDropDownItem() {
+    setState(() {
+      holder = dropdownValue;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,18 +32,25 @@ class CityListState extends State<CityList> {
             // Decode the SON
             var Data = json.decode(snapshot.data.toString());
 
+            // locationName.add(Data);
+            print(Data[0]['name']);
+
+            for (var i = 0; i < Data.length; i++) {
+              locationName.add(Data[i]['name']);
+            }
+            print(locationName);
+
             return ListView.builder(
               // Build the ListView
+
               itemBuilder: (BuildContext context, int index) {
-                return Card(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: <Widget>[
-                      Text("Name: " + Data[index]['name']),
-                      Text('Id: ${Data[index]['id']}'),
-                      Text("Country: " + Data[index]['country']),
-                    ],
-                  ),
+                return Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(Data[index]['name']),
+                    // Text('Id: ${Data[index]['id']}'),
+                    // Text("Country: " + Data[index]['country']),
+                  ],
                 );
               },
               itemCount: Data == null ? 0 : Data.length,
