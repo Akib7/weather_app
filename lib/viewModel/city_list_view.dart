@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/model/weather_model.dart';
 
 class CityListView extends StatefulWidget {
   final List<dynamic> result;
@@ -21,7 +20,7 @@ class _CityListViewState extends State<CityListView> {
             SizedBox(
               height: height,
               width: width,
-              child: Text(''),
+              child: const Text(''),
             ),
           ],
         ),

@@ -33,7 +33,7 @@ class _DropDownState extends State<DropDown> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.location_pin),
+          const Icon(Icons.location_pin),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
@@ -46,7 +46,7 @@ class _DropDownState extends State<DropDown> {
               ),
               DropdownButton<String>(
                 value: dropdownValue,
-                icon: Icon(Icons.arrow_drop_down),
+                icon: const Icon(Icons.arrow_drop_down),
                 iconSize: 24,
                 elevation: 16,
                 style: const TextStyle(
