@@ -1,9 +1,9 @@
 class WeatherModelWind {
 /*
 {
-  "speed": 0.45,
-  "deg": 219,
-  "gust": 1.34
+  "speed": 3.78,
+  "deg": 147,
+  "gust": 6.18
 } 
 */
 

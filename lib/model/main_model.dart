@@ -1,12 +1,14 @@
 class WeatherModelMain {
 /*
 {
-  "temp": 298.32,
-  "feels_like": 299.32,
-  "temp_min": 298.32,
-  "temp_max": 298.32,
-  "pressure": 1008,
-  "humidity": 93
+  "temp": 292.43,
+  "feels_like": 292.76,
+  "temp_min": 292.43,
+  "temp_max": 292.43,
+  "pressure": 1017,
+  "humidity": 90,
+  "sea_level": 1017,
+  "grnd_level": 1017
 } 
 */
 
@@ -16,6 +18,8 @@ class WeatherModelMain {
   double? tempMax;
   int? pressure;
   int? humidity;
+  int? seaLevel;
+  int? grndLevel;
 
   WeatherModelMain({
     this.temp,
@@ -24,6 +28,8 @@ class WeatherModelMain {
     this.tempMax,
     this.pressure,
     this.humidity,
+    this.seaLevel,
+    this.grndLevel,
   });
   WeatherModelMain.fromJson(Map<String, dynamic> json) {
     temp = json['temp']?.toDouble();
@@ -32,6 +38,8 @@ class WeatherModelMain {
     tempMax = json['temp_max']?.toDouble();
     pressure = json['pressure']?.toInt();
     humidity = json['humidity']?.toInt();
+    seaLevel = json['sea_level']?.toInt();
+    grndLevel = json['grnd_level']?.toInt();
   }
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
@@ -41,6 +49,8 @@ class WeatherModelMain {
     data['temp_max'] = tempMax;
     data['pressure'] = pressure;
     data['humidity'] = humidity;
+    data['sea_level'] = seaLevel;
+    data['grnd_level'] = grndLevel;
     return data;
   }
 }

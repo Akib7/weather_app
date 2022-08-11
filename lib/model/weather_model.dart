@@ -1,7 +1,8 @@
+import 'package:weather_app/model/coords_model.dart';
+import 'package:weather_app/model/sys_model.dart';
+
 import 'clouds_model.dart';
-import 'coords_model.dart';
 import 'main_model.dart';
-import 'sys_model.dart';
 import 'weather_weather_model.dart';
 import 'wind_model.dart';
 
@@ -13,46 +14,46 @@ class WeatherModel {
 /*
 {
   "coord": {
-    "lon": 139,
-    "lat": 35
+    "lon": 145.7667,
+    "lat": -16.9167
   },
   "weather": [
     {
-      "id": 804,
+      "id": 802,
       "main": "Clouds",
-      "description": "overcast clouds",
-      "icon": "04n"
+      "description": "scattered clouds",
+      "icon": "03n"
     }
   ],
   "base": "stations",
   "main": {
-    "temp": 298.32,
-    "feels_like": 299.32,
-    "temp_min": 298.32,
-    "temp_max": 298.32,
-    "pressure": 1008,
-    "humidity": 93
+    "temp": 292.43,
+    "feels_like": 292.76,
+    "temp_min": 292.43,
+    "temp_max": 292.43,
+    "pressure": 1017,
+    "humidity": 90,
+    "sea_level": 1017,
+    "grnd_level": 1017
   },
   "visibility": 10000,
   "wind": {
-    "speed": 0.45,
-    "deg": 219,
-    "gust": 1.34
+    "speed": 3.78,
+    "deg": 147,
+    "gust": 6.18
   },
   "clouds": {
-    "all": 97
+    "all": 48
   },
-  "dt": 1659462183,
+  "dt": 1660224956,
   "sys": {
-    "type": 2,
-    "id": 2019346,
-    "country": "JP",
-    "sunrise": 1659470065,
-    "sunset": 1659519956
+    "country": "AU",
+    "sunrise": 1660163875,
+    "sunset": 1660205201
   },
-  "timezone": 32400,
-  "id": 1851632,
-  "name": "Shuzenji",
+  "timezone": 36000,
+  "id": 2172797,
+  "name": "Cairns",
   "cod": 200
 } 
 */

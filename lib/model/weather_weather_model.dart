@@ -1,10 +1,10 @@
 class WeatherModelWeather {
 /*
 {
-  "id": 804,
+  "id": 802,
   "main": "Clouds",
-  "description": "overcast clouds",
-  "icon": "04n"
+  "description": "scattered clouds",
+  "icon": "03n"
 } 
 */
 

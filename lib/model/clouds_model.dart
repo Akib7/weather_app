@@ -1,7 +1,7 @@
 class WeatherModelClouds {
 /*
 {
-  "all": 97
+  "all": 48
 } 
 */
 

@@ -1,21 +1,21 @@
 class WeatherModelCoord {
 /*
 {
-  "lon": 139,
-  "lat": 35
+  "lon": 145.7667,
+  "lat": -16.9167
 } 
 */
 
-  int? lon;
-  int? lat;
+  double? lon;
+  double? lat;
 
   WeatherModelCoord({
     this.lon,
     this.lat,
   });
   WeatherModelCoord.fromJson(Map<String, dynamic> json) {
-    lon = json['lon']?.toInt();
-    lat = json['lat']?.toInt();
+    lon = json['lon']?.toDouble();
+    lat = json['lat']?.toDouble();
   }
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
