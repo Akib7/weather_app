@@ -32,21 +32,23 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    // Map<String, dynamic> user = jsonDecode(jsonString);
     return Scaffold(
-        appBar: AppBar(
-          title: const Center(child: Text('Weather App')),
-        ),
-        body: FutureBuilder<WeatherModel>(
-          future: weatherData,
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              final result = snapshot.data!;
-              return ResultView(result: result);
-            } else if (snapshot.hasError) {
-              return Text('${snapshot.error}');
-            }
-            return const Center(child: CircularProgressIndicator());
-          },
-        ));
+      appBar: AppBar(
+        title: const Center(child: Text('Weather App')),
+      ),
+      body: FutureBuilder<WeatherModel>(
+        future: weatherData,
+        builder: (context, snapshot) {
+          if (snapshot.hasData) {
+            final result = snapshot.data!;
+            return ResultView(result: result);
+          } else if (snapshot.hasError) {
+            return Text('${snapshot.error}');
+          }
+          return const Center(child: CircularProgressIndicator());
+        },
+      ),
+    );
   }
 }

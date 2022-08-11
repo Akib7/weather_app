@@ -14,10 +14,18 @@ class _ResultViewState extends State<ResultView> {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
-    return SizedBox(
-      height: height,
-      width: width,
-      child: Center(child: Text("lat - ${widget.result.coord!.lat}")),
+    return ListView(
+      children: [
+        Column(
+          children: [
+            SizedBox(
+              height: height,
+              width: width,
+              child: Center(child: Text("lat - ${widget.result.coord!.lat}")),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

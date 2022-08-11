@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/view/city_list.dart';
 
 import 'view/my_home_page.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: const CityList(),
     );
   }
 }
