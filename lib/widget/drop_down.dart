@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/view/city_list.dart';
 
 class DropDown extends StatefulWidget {
-  const DropDown({
-    Key? key,
-  }) : super(key: key);
+  const DropDown({Key? key}) : super(key: key);
 
   @override
-  _DropDownState createState() => _DropDownState();
+  State<DropDown> createState() => _DropDownState();
 }
 
 class _DropDownState extends State<DropDown> {

@@ -24,7 +24,7 @@ class _ResultViewState extends State<ResultView> {
               width: width,
               child: Center(child: Text("lat - ${widget.result.coord!.lat}")),
             ),
-            DropDown(),
+            const DropDown(),
           ],
         ),
       ],

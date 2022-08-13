@@ -24,7 +24,7 @@ class CityListState extends State<CityList> {
             DefaultAssetBundle.of(context).loadString('assets/city_list.json'),
         builder: (context, snapshot) {
           // Decode the SON
-          var Data = json.decode(snapshot.data.toString());
+          var response = json.decode(snapshot.data.toString());
 
           // locationName.add(Data[0]['name']);
           // var loc = widget.location.add(Data[0]['name']);
@@ -42,13 +42,13 @@ class CityListState extends State<CityList> {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(Data[index]['name']),
-                  // Text('Id: ${Data[index]['id']}'),
-                  // Text("Country: " + Data[index]['country']),
+                  Text(response[index]['name']),
+                  // Text('Id: ${response[index]['id']}'),
+                  // Text("Country: " + response[index]['country']),
                 ],
               );
             },
-            itemCount: Data == null ? 0 : Data.length,
+            itemCount: response == null ? 0 : response.length,
           );
         },
       ),
