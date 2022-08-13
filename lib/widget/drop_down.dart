@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/view/city_list.dart';
 
 class DropDown extends StatefulWidget {
   const DropDown({
@@ -12,6 +13,9 @@ class DropDown extends StatefulWidget {
 class _DropDownState extends State<DropDown> {
   String dropdownValue = '8502 Preston Rd. Inglewood';
   String holder = '';
+
+  List<String> destName = [];
+
   List<String> locationName = [
     '221B Baker Street',
     '8502 Preston Rd. Inglewood',

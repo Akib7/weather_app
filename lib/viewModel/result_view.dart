@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:weather_app/model/weather_model.dart';
+import 'package:weather_app/widget/drop_down.dart';
 
 class ResultView extends StatefulWidget {
   final WeatherModel result;
@@ -23,6 +24,7 @@ class _ResultViewState extends State<ResultView> {
               width: width,
               child: Center(child: Text("lat - ${widget.result.coord!.lat}")),
             ),
+            DropDown(),
           ],
         ),
       ],

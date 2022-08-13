@@ -3,7 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 
 class CityList extends StatefulWidget {
-  const CityList({Key? key}) : super(key: key);
+  final List location;
+  const CityList({Key? key, required this.location}) : super(key: key);
 
   @override
   CityListState createState() => CityListState();
@@ -25,13 +26,14 @@ class CityListState extends State<CityList> {
           // Decode the SON
           var Data = json.decode(snapshot.data.toString());
 
-          // locationName.add(Data);
+          // locationName.add(Data[0]['name']);
+          // var loc = widget.location.add(Data[0]['name']);
           // print(Data[0]['name']);
 
           // for (var i = 0; i < Data.length; i++) {
           //   locationName.add(Data[i]['name']);
           // }
-          // print(locationName);
+          // print(loc);
 
           return ListView.builder(
             // Build the ListView
